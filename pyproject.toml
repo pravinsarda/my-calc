@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mycalc"
+version = "0.1.0"
+description = "A tiny calculator package for learning CI/CD with Docker"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+mycalc = "mycalc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
